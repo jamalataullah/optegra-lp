@@ -785,223 +785,6 @@
   }
   .postcode-error.show { display: block; }
 
-  /* ============ BOOKING WIDGET ============ */
-  .booking-widget {
-    display: none;
-    background: #F7FBFB;
-    padding: 56px 0 80px;
-    scroll-margin-top: 24px;
-    border-top: 1px solid var(--rule);
-  }
-  .booking-widget.open { display: block; animation: revealWidget .35s ease-out; }
-  @keyframes revealWidget {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .booking-widget h2 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-    color: #007374;
-    letter-spacing: -0.02em;
-    margin: 0 0 8px;
-  }
-  .booking-widget .lede {
-    text-align: center;
-    color: #007374;
-    font-size: 15px;
-    font-weight: 600;
-    margin: 0 0 32px;
-  }
-  .booking-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 36px;
-    box-shadow: 0 4px 24px rgba(10, 91, 86, 0.06);
-    border: 1px solid var(--rule);
-  }
-  .booking-tabs {
-    display: flex;
-    border-bottom: 1px solid var(--rule);
-    margin-bottom: 36px;
-  }
-  .booking-tab {
-    flex: 1;
-    padding: 14px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #b0bcba;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
-  }
-  .booking-tab.active {
-    color: #007374;
-    border-bottom-color: #007374;
-  }
-  .booking-tab .num {
-    width: 24px; height: 24px;
-    border: 1.5px solid currentColor;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .booking-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 28px;
-  }
-  .booking-info {
-    background: #f5f7f6;
-    padding: 24px;
-    border-radius: 10px;
-    font-size: 14px;
-  }
-  .booking-info p {
-    margin: 0 0 12px;
-    color: var(--ink-2);
-    line-height: 1.6;
-  }
-  .booking-info strong { color: var(--ink); }
-  .booking-info .italic {
-    font-style: italic;
-  }
-  .booking-info hr {
-    border: none;
-    border-top: 1px solid var(--rule);
-    margin: 20px 0;
-  }
-  .booking-info .small-label {
-    font-size: 14px;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-  .hospital-name {
-    font-size: 18px;
-    font-weight: 700;
-    color: #007374;
-    margin: 0 0 18px;
-    line-height: 1.3;
-  }
-  .hospital-address {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  .hospital-address svg {
-    flex: 0 0 18px;
-    width: 18px; height: 18px;
-    color: var(--ink);
-    margin-top: 2px;
-  }
-  .hospital-address-content {
-    font-size: 14px;
-    color: var(--ink-2);
-    line-height: 1.6;
-  }
-  .hospital-address-content strong { display: block; margin-bottom: 4px; color: var(--ink); }
-  .booking-calendar {
-    border: 1px solid var(--rule);
-    border-radius: 8px;
-    padding: 20px 16px;
-  }
-  .calendar-header {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    color: #007374;
-    margin: 0 0 18px;
-  }
-  .calendar-month-label {
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--ink-2);
-    letter-spacing: 0.14em;
-    margin: 16px 0 8px;
-  }
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
-  }
-  .calendar-day-name {
-    text-align: center;
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    padding: 6px 0 8px;
-  }
-  .calendar-day {
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 50%;
-    cursor: pointer;
-    color: #007374;
-    transition: background .15s ease;
-  }
-  .calendar-day:hover { background: #E8F4F4; }
-  .calendar-day.disabled { color: #c5cdcb; cursor: default; }
-  .calendar-day.disabled:hover { background: transparent; }
-  .calendar-day.selected {
-    border: 1.5px solid #007374;
-    color: #007374;
-  }
-  .calendar-day.empty { visibility: hidden; cursor: default; }
-  .booking-slots h4 {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--ink);
-    margin: 0 0 12px;
-    line-height: 1.4;
-  }
-  .booking-slots p {
-    font-size: 14px;
-    color: var(--ink-2);
-    line-height: 1.6;
-    margin: 0 0 14px;
-  }
-  .booking-slots .phone { font-weight: 700; color: var(--ink); }
-  .btn-secondary-cta {
-    background: var(--orange);
-    color: #fff;
-    border: none;
-    padding: 13px 22px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 999px;
-    cursor: pointer;
-    margin-top: 4px;
-  }
-  .btn-secondary-cta:hover { background: var(--orange-hover); }
-  .booking-cta-footer {
-    margin-top: 32px;
-    text-align: center;
-  }
-  .btn-continue {
-    background: var(--orange);
-    color: #fff;
-    border: none;
-    padding: 16px 44px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 999px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .btn-continue:hover { background: var(--orange-hover); }
-
   /* ============ CALLBACK MODAL ============ */
   .modal-overlay {
     position: fixed;
@@ -1162,9 +945,6 @@
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .process-grid::before { display: none; }
     .section, .surgeons, .process, .faq, .reviews, .cta-banner { padding: 56px 0; }
-    .booking-grid { grid-template-columns: 1fr; gap: 20px; }
-    .booking-card { padding: 24px; }
-    .booking-widget h2 { font-size: 24px; }
   }
   @media (max-width: 560px) {
     .hero h1 { font-size: 32px; }
@@ -1301,67 +1081,6 @@
     <div class="hero-image">
       <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=900&q=80"
            alt="Doctor consulting with a patient about laser eye surgery" />
-    </div>
-  </div>
-</section>
-
-<!-- ============ BOOKING WIDGET ============ -->
-<section class="booking-widget" id="booking-widget" aria-hidden="true">
-  <div class="wrap">
-    <h2>Book a free virtual consultation</h2>
-    <p class="lede">Just follow the steps below...</p>
-    <div class="booking-card">
-      <div class="booking-tabs">
-        <div class="booking-tab active">
-          <span class="num">1</span>
-          <span>Date and Time</span>
-        </div>
-        <div class="booking-tab">
-          <span class="num">2</span>
-          <span>Contact Details</span>
-        </div>
-      </div>
-
-      <div class="booking-grid">
-        <div class="booking-info">
-          <p><strong>Step 1:</strong> Virtual consultation</p>
-          <p><strong>Step 2:</strong> Face to face assessment at your nearby hospital</p>
-          <p class="italic">If you're making a booking on behalf of someone else, please input their contact details and information and make sure they are present at the appointment.</p>
-          <hr/>
-          <p class="small-label">Your nearest hospital is:</p>
-          <h3 class="hospital-name" id="hospital-name">Optegra Eye Hospital Manchester</h3>
-          <div class="hospital-address">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div class="hospital-address-content" id="hospital-address">
-              <strong>Address</strong>
-              One Didsbury Point<br/>
-              2 The Avenue<br/>
-              Didsbury<br/>
-              Manchester<br/>
-              M20 2EY
-            </div>
-          </div>
-        </div>
-
-        <div class="booking-calendar">
-          <h4 class="calendar-header">Next Available Dates</h4>
-          <p class="calendar-month-label">MAY 2026</p>
-          <div class="calendar-grid" id="calendar-grid"></div>
-          <p class="calendar-month-label">JUNE 2026</p>
-          <div class="calendar-grid" id="calendar-grid-2"></div>
-        </div>
-
-        <div class="booking-slots">
-          <h4>Sorry, there are no more booking slots available for today.</h4>
-          <p>Please click on another date for more available time slots.</p>
-          <p>Or if you prefer, you can call our Patient Services Team on <span class="phone">0800 086 1064</span>.</p>
-          <button class="btn-secondary-cta">View next available day</button>
-        </div>
-      </div>
-
-      <div class="booking-cta-footer">
-        <button class="btn-continue">Enter your contact details ▸</button>
-      </div>
     </div>
   </div>
 </section>
@@ -1802,29 +1521,6 @@
 </footer>
 
 <script>
-  const HOSPITALS = {
-    M:  { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
-    BL: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
-    OL: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
-    SK: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
-    WA: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
-    L:  { name: "Optegra Eye Hospital Liverpool",  address: ["Liverpool Innovation Park", "Edge Lane", "Liverpool", "L7 9NJ"] },
-    B:  { name: "Optegra Eye Hospital Birmingham", address: ["Aston Cross Business Park", "50 Rocky Lane", "Aston", "Birmingham", "B6 5RQ"] },
-    CV: { name: "Optegra Eye Hospital Birmingham", address: ["Aston Cross Business Park", "50 Rocky Lane", "Aston", "Birmingham", "B6 5RQ"] },
-    LS: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
-    BD: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
-    HD: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
-    HX: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
-    LONDON: { name: "Optegra Eye Hospital London", address: ["25 Queen Anne Street", "Marylebone", "London", "W1G 9HT"] },
-  };
-  const LONDON_PREFIXES = ["EC","WC","W","N","NW","SW","SE","E"];
-
-  function lookupHospital(postcode) {
-    const prefix = (postcode.match(/^[A-Z]+/) || [""])[0];
-    if (LONDON_PREFIXES.includes(prefix)) return HOSPITALS.LONDON;
-    return HOSPITALS[prefix] || HOSPITALS.M;
-  }
-
   function handlePostcodeSubmitFromTrigger(buttonEl) {
     const formEl = buttonEl.closest('[data-postcode-form]');
     if (!formEl) return false;
@@ -1839,61 +1535,17 @@
     }
     if (error) error.classList.remove('show');
 
-    const hospital = lookupHospital(value);
-    document.getElementById('hospital-name').textContent = hospital.name;
-    document.getElementById('hospital-address').innerHTML =
-      '<strong>Address</strong>' + hospital.address.join('<br/>');
-
-    // Sync the value to all other postcode forms so the user sees their postcode persisted
+    // Sync the value across all postcode forms so the user sees their input persisted
     document.querySelectorAll('[data-postcode-input]').forEach(otherInput => {
       if (otherInput !== input) otherInput.value = value;
     });
     document.querySelectorAll('[data-postcode-form]').forEach(f => f.classList.add('valid'));
 
-    const widget = document.getElementById('booking-widget');
-    widget.classList.add('open');
-    widget.setAttribute('aria-hidden', 'false');
-
-    setTimeout(() => {
-      widget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 80);
+    // TODO: Replace with redirect to Optegra's booking page once URL is confirmed
+    // Example: window.location.href = 'https://book.optegra.com/?postcode=' + encodeURIComponent(value);
+    alert('Postcode received: ' + value + '\n\nThis will redirect to Optegra\'s booking page once the URL is wired up.');
 
     return false;
-  }
-
-  function buildCalendar(elementId, year, month, monthLabel) {
-    const grid = document.getElementById(elementId);
-    if (!grid) return;
-    const today = new Date(2026, 4, 2); // 2 May 2026 — pinned for demo
-    const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
-    const startDayOfWeek = firstDay.getDay();
-    const daysInMonth = lastDay.getDate();
-    const dayNames = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
-
-    let html = '';
-    dayNames.forEach(d => { html += `<div class="calendar-day-name">${d}</div>`; });
-    for (let i = 0; i < startDayOfWeek; i++) html += `<div class="calendar-day empty"></div>`;
-
-    for (let d = 1; d <= daysInMonth; d++) {
-      const date = new Date(year, month, d);
-      const dayOfWeek = date.getDay();
-      const isPast = date < today;
-      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-      const isSelectedDefault = (year === 2026 && month === 4 && d === 2);
-      let classes = 'calendar-day';
-      if (isPast || isWeekend) classes += ' disabled';
-      if (isSelectedDefault) classes += ' selected';
-      html += `<div class="${classes}" data-date="${year}-${month+1}-${d}">${d}</div>`;
-    }
-    grid.innerHTML = html;
-
-    grid.querySelectorAll('.calendar-day:not(.disabled):not(.empty)').forEach(el => {
-      el.addEventListener('click', () => {
-        document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
-        el.classList.add('selected');
-      });
-    });
   }
 
   function openCallbackModal() {
@@ -1951,9 +1603,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    buildCalendar('calendar-grid', 2026, 4);   // May 2026
-    buildCalendar('calendar-grid-2', 2026, 5); // June 2026
-
     // Wire up live validation glow + error clearing for ALL postcode forms on the page
     const ukPostcodeRegex = /^[A-Z]{1,2}[0-9R][0-9A-Z]?\s*[0-9][A-Z]{2}$/i;
     document.querySelectorAll('[data-postcode-input]').forEach(input => {
