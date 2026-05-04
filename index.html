@@ -936,6 +936,68 @@
   }
   body.modal-open { overflow: hidden; }
 
+  /* ============ BOOKING IFRAME SECTION ============ */
+  .booking-iframe-section {
+    display: none;
+    background: #F7FBFB;
+    padding: 40px 0 60px;
+    scroll-margin-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .booking-iframe-section.open {
+    display: block;
+    animation: revealIframe .35s ease-out;
+  }
+  @keyframes revealIframe {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .booking-iframe-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #007374;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .booking-iframe-section .lede {
+    text-align: center;
+    color: var(--ink-2);
+    font-size: 15px;
+    margin: 0 0 28px;
+  }
+  .booking-iframe-wrap {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(10, 91, 86, 0.08);
+    border: 1px solid var(--rule);
+  }
+  .booking-iframe-wrap iframe {
+    width: 100%;
+    height: 1400px;
+    border: 0;
+    display: block;
+  }
+  .iframe-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F7FBFB;
+    color: #007374;
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+    transition: opacity .3s ease;
+  }
+  .iframe-loaded .iframe-loading {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   /* ============ RESPONSIVE ============ */
   @media (max-width: 960px) {
     .hero-grid, .surgeons-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1081,6 +1143,24 @@
     <div class="hero-image">
       <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=900&q=80"
            alt="Doctor consulting with a patient about laser eye surgery" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING IFRAME SECTION ============ -->
+<section class="booking-iframe-section" id="booking-iframe-section" aria-hidden="true">
+  <div class="wrap">
+    <h2>Book your free consultation</h2>
+    <p class="lede">Choose a date and time that works for you</p>
+    <div class="booking-iframe-wrap" id="booking-iframe-wrap">
+      <div class="iframe-loading">Loading booking system...</div>
+      <iframe
+        id="booking-iframe"
+        title="Book a free consultation"
+        loading="lazy"
+        allow="payment"
+        onload="document.getElementById('booking-iframe-wrap').classList.add('iframe-loaded')">
+      </iframe>
     </div>
   </div>
 </section>
@@ -1541,9 +1621,22 @@
     });
     document.querySelectorAll('[data-postcode-form]').forEach(f => f.classList.add('valid'));
 
-    // TODO: Replace with redirect to Optegra's booking page once URL is confirmed
-    // Example: window.location.href = 'https://book.optegra.com/?postcode=' + encodeURIComponent(value);
-    alert('Postcode received: ' + value + '\n\nThis will redirect to Optegra\'s booking page once the URL is wired up.');
+    // Reveal the iframe with the control page's booking widget
+    const iframeSection = document.getElementById('booking-iframe-section');
+    const iframe = document.getElementById('booking-iframe');
+    if (iframeSection && iframe) {
+      // Set src on first reveal (lazy load — avoids loading on page open)
+      if (!iframe.src) {
+        const postcodeParam = encodeURIComponent(value);
+        iframe.src = 'https://www.optegra.com/laser-eye-surgery/?postcode=' + postcodeParam;
+      }
+      iframeSection.classList.add('open');
+      iframeSection.setAttribute('aria-hidden', 'false');
+
+      setTimeout(() => {
+        iframeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
 
     return false;
   }
