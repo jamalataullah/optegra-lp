@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laser Eye Surgery for Life | Optegra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal-900: #0a5b56;
+    --teal-800: #0e6b65;
+    --teal-700: #1a7b75;
+    --teal-50:  #d8ecde;
+    --teal-100: #e6f1e9;
+    --mint-bg:  #d4ead9;
+    --mint-bg-2:#e9f3ec;
+    --orange:   #e8572d;
+    --orange-hover: #d84a22;
+    --ink:      #0f1f1d;
+    --ink-2:    #2b3a38;
+    --muted:    #5a6b69;
+    --rule:     #e5ebe9;
+    --card:     #ffffff;
+    --page:     #ffffff;
+    --soft:     #f5f7f6;
+    --trust:    #00b67a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--page);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ============ HEADER ============ */
+  .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 0;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #3ba599, var(--teal-900));
+    position: relative;
+  }
+  .logo-mark::after{
+    content:"";
+    position:absolute; inset:6px;
+    border-radius:50%;
+    background:#0a5b56;
+    box-shadow: inset 0 0 0 2px #3ba599;
+  }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo-text .brand { font-weight: 700; font-size: 18px; color: var(--teal-900); letter-spacing: -0.01em;}
+  .logo-text .tag { font-size: 9px; color: var(--teal-900); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 2px;}
+  .text-size { display: flex; align-items: center; gap: 6px; color: var(--ink-2); }
+  .text-size span { cursor: pointer; padding: 2px 4px; }
+  .text-size span:nth-child(1) { font-size: 12px; }
+  .text-size span:nth-child(2) { font-size: 15px; font-weight: 600;}
+  .text-size span:nth-child(3) { font-size: 18px; }
+
+  /* ============ ANNOUNCEMENT BAR ============ */
+  .announce {
+    background: #007374;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 11px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+  }
+  .announce .arrow {
+    position: absolute; left: 24px;
+    color: #ffffff;
+    font-size: 12px;
+    opacity: .8;
+  }
+  .announce .close {
+    position: absolute; right: 24px;
+    color: #ffffff;
+    opacity: .8;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .announce em {
+    font-style: italic;
+    opacity: .95;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    background: #F7FBFB;
+    padding: 56px 0 64px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content:"";
+    position: absolute; top: -80px; right: -60px;
+    width: 320px; height: 280px;
+    background: radial-gradient(circle at 50% 50%, #b8e0d6 0%, rgba(184,224,214,0) 70%);
+    opacity: .5;
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+  }
+  .hero h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 16px;
+  }
+  .hero .sub {
+    font-size: 18px;
+    color: var(--ink-2);
+    margin: 0 0 28px;
+  }
+  .hero-point {
+    display: flex; align-items: center; gap: 10px;
+    color: var(--ink);
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .check {
+    width: 18px; height: 18px; flex: 0 0 18px;
+    color: var(--teal-900);
+  }
+  .price-pill { font-weight: 700; color: var(--ink); font-size: 1.3em; }
+  .trust-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 28px;
+  }
+  .trust-row .label { font-weight: 600; color: var(--ink); font-size: 15px; }
+  .trust-stars { display: flex; gap: 3px; }
+  .trust-stars .star-box {
+    width: 20px; height: 20px; background: var(--trust);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .trust-stars .star-box svg { width: 13px; height: 13px; color: #fff; }
+  .trust-brand {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 14px; color: var(--ink);
+  }
+  .trust-brand .tp-star { width: 14px; height: 14px; color: var(--trust); }
+
+  .cta-row { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+  .btn-primary {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 15px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 999px;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .btn-primary:hover { background: var(--orange-hover); }
+  .link-underline {
+    color: var(--ink);
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
+  .hero .fineprint {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+    max-width: 440px;
+    line-height: 1.55;
+  }
+
+  .hero-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 6/5;
+    background: linear-gradient(135deg, #cde3d2 0%, #b8d4bf 100%);
+  }
+  .hero-image img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .hero-image::after {
+    content:"";
+    position: absolute; top: 8px; right: 8px;
+    width: 40px; height: 40px;
+    background: var(--teal-900);
+    border-radius: 4px;
+    opacity: 0;
+  }
+
+  /* ============ STATS STRIP ============ */
+  .stats {
+    background: var(--teal-900);
+    color: #fff;
+    padding: 32px 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .stat {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    gap: 8px;
+  }
+  .stat-icon {
+    width: 26px; height: 26px;
+    display: flex; align-items: center; justify-content: center;
+    color: #ffffff;
+  }
+  .stat-title { font-weight: 700; font-size: 16px; line-height: 1.2; }
+  .stat-sub { font-size: 13px; opacity: .82; }
+
+  /* ============ SECTION: BENEFITS ============ */
+  .section { padding: 80px 0; }
+  .section-tight { padding: 64px 0; }
+  .section h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .section .lede {
+    text-align: center;
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 0 48px;
+  }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .benefit-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .benefit-icon {
+    width: 44px; height: 44px;
+    background: #E8F4F4;
+    color: #007374;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .benefit-icon svg { width: 22px; height: 22px; }
+  .benefit-card h3 {
+    font-size: 18px; font-weight: 600;
+    margin: 0 0 16px;
+  }
+  .benefit-card ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .benefit-card li {
+    display: flex; gap: 10px;
+    font-size: 14px; color: var(--ink-2);
+    line-height: 1.5;
+  }
+  .benefit-card li .bullet {
+    color: var(--teal-900);
+    flex: 0 0 16px;
+    margin-top: 3px;
+  }
+  .benefit-card li .bullet svg { width: 14px; height: 14px; }
+  .benefit-card strong { font-weight: 700; color: var(--ink); }
+
+  /* ============ REVIEWS ============ */
+  .reviews {
+    background: #F7FBFB;
+    padding: 72px 0 80px;
+  }
+  .reviews h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 22px;
+    letter-spacing: -0.02em;
+  }
+  .reviews-rating {
+    display: flex; align-items: center; justify-content: center;
+    gap: 10px;
+    margin-bottom: 48px;
+    font-size: 14px;
+    color: var(--ink-2);
+    flex-wrap: wrap;
+  }
+  .reviews-rating .label { font-weight: 700; color: var(--ink); }
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .review-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .review-card .stars {
+    display: flex; gap: 2px;
+    margin-bottom: 14px;
+  }
+  .review-card .stars .star-box {
+    width: 18px; height: 18px; background: var(--trust);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .review-card .stars .star-box svg { width: 11px; height: 11px; color: #fff; }
+  .review-card p {
+    font-size: 14px; color: var(--ink-2);
+    margin: 0 0 14px;
+    font-style: italic;
+    line-height: 1.55;
+  }
+  .review-card .author {
+    font-size: 14px; font-weight: 600; color: var(--ink);
+  }
+
+  /* ============ CTA BANNER ============ */
+  .cta-banner {
+    background: var(--teal-900);
+    color: #fff;
+    padding: 72px 0;
+    text-align: center;
+  }
+  .cta-banner h2 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 auto 20px;
+    max-width: 620px;
+    line-height: 1.2;
+  }
+  .cta-banner p {
+    font-size: 15px;
+    opacity: .92;
+    margin: 0 auto 28px;
+    max-width: 520px;
+  }
+  .cta-banner .link-underline { color: #fff; display: block; margin-top: 18px; text-align: center; }
+  .cta-banner .postcode-form {
+    margin: 0 auto;
+    max-width: 420px;
+  }
+  .cta-banner .cta-row {
+    align-items: center;
+  }
+
+  /* ============ PRICING ============ */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .price-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 26px;
+    display: flex; flex-direction: column;
+  }
+  .price-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    letter-spacing: 0.02em;
+  }
+  .price-card .desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0 0 20px;
+    min-height: 78px;
+  }
+  .price {
+    font-size: 30px;
+    font-weight: 700;
+    color: #007374;
+    line-height: 1;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .price-sub { font-size: 12px; color: var(--muted); margin-bottom: 18px; }
+  .price-divider { height: 1px; background: var(--rule); margin-bottom: 16px; }
+  .price-card ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .price-card li {
+    font-size: 13px; color: var(--ink-2);
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+  .price-card li::before {
+    content: "•";
+    position: absolute; left: 0; top: 0;
+    color: var(--teal-900);
+    font-weight: 700;
+  }
+
+  /* ============ SURGEONS ============ */
+  .surgeons {
+    padding: 80px 0;
+    background: #F7FBFB;
+  }
+  .surgeons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .surgeons h2 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    text-align: left;
+  }
+  .surgeon-card {
+    display: flex; gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .surgeon-card:last-child { border-bottom: none; }
+  .surgeon-icon {
+    flex: 0 0 38px;
+    width: 38px; height: 38px;
+    background: #E8F4F4;
+    color: #007374;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .surgeon-icon svg { width: 20px; height: 20px; }
+  .surgeon-card h4 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .surgeon-card p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .surgeon-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 5/4;
+    background: linear-gradient(135deg, #2c4e4a, #486b66);
+  }
+  .surgeon-image img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .surgeon-badge {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    white-space: nowrap;
+  }
+  .surgeon-badge .icon {
+    width: 16px; height: 16px;
+    color: var(--teal-900);
+  }
+
+  /* ============ PROCESS ============ */
+  .process {
+    padding: 80px 0;
+    background: #fff;
+  }
+  .process h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .process .lede {
+    text-align: center;
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 0 56px;
+  }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+  }
+  .process-grid::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 16.66%;
+    right: 16.66%;
+    height: 1px;
+    border-top: 1.5px dashed var(--teal-900);
+    opacity: .5;
+    z-index: 0;
+  }
+  .process-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+  }
+  .step-circle {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1.5px solid #007374;
+    color: #007374;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 18px;
+    position: relative;
+  }
+  .step-circle svg { width: 22px; height: 22px; }
+  .step-number {
+    position: absolute;
+    top: -6px; right: -6px;
+    width: 20px; height: 20px;
+    background: #007374;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .process-step h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+  .process-step p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ============ FAQ ============ */
+  .faq {
+    padding: 80px 0 88px;
+  }
+  .faq h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .faq .lede {
+    text-align: center;
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 0 44px;
+  }
+  .faq-list {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  details.faq-item {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+  }
+  details.faq-item[open] {
+    border-color: var(--teal-900);
+  }
+  details.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 22px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item .caret {
+    color: var(--ink);
+    transition: transform .2s ease;
+  }
+  details.faq-item[open] .caret { transform: rotate(180deg); }
+  details.faq-item .answer {
+    padding: 0 22px 20px;
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.65;
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    background: var(--teal-900);
+    color: #ffffff;
+    padding: 56px 0 24px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .footer-brand .logo-text .brand { color: #fff; }
+  .footer-brand .logo-text .tag { color: #b8d4bf; }
+  .footer-brand .logo-mark {
+    background: radial-gradient(circle at 35% 35%, #b8d4bf, #4a8e85);
+  }
+  .footer-brand .logo-mark::after {
+    background: var(--teal-900);
+    box-shadow: inset 0 0 0 2px #b8d4bf;
+  }
+  .footer-brand p {
+    margin: 18px 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: .82;
+    max-width: 280px;
+  }
+  .footer-col h5 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+    opacity: .85;
+  }
+  .footer-col ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .footer-col a {
+    font-size: 14px;
+    color: #fff;
+    opacity: .92;
+    transition: opacity .15s ease;
+  }
+  .footer-col a:hover { opacity: 1; text-decoration: underline; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    opacity: .78;
+  }
+  .footer-bottom-links { display: flex; gap: 24px; }
+
+  /* ============ POSTCODE FORM ============ */
+  .postcode-form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 999px;
+    padding: 6px;
+    box-shadow: 0 2px 16px rgba(10, 91, 86, 0.08);
+    border: 1px solid var(--rule);
+    width: 100%;
+    max-width: 480px;
+    transition: box-shadow .2s ease, border-color .2s ease;
+  }
+  .postcode-form:focus-within {
+    border-color: #007374;
+    box-shadow: 0 4px 20px rgba(0, 115, 116, 0.14);
+  }
+  .postcode-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 0 14px 0 20px;
+    font-size: 15px;
+    background: transparent;
+    font-family: inherit;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .postcode-input::placeholder {
+    color: var(--muted);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .postcode-input::selection {
+    background: rgba(0, 115, 116, 0.12);
+    color: var(--ink);
+  }
+  .postcode-input::-moz-selection {
+    background: rgba(0, 115, 116, 0.12);
+    color: var(--ink);
+  }
+  .postcode-input:autofill,
+  .postcode-input:-webkit-autofill,
+  .postcode-input:-webkit-autofill:hover,
+  .postcode-input:-webkit-autofill:focus,
+  .postcode-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    box-shadow: 0 0 0 1000px #ffffff inset !important;
+    -webkit-text-fill-color: var(--ink) !important;
+    caret-color: var(--ink);
+    background-color: #ffffff !important;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+  .postcode-form .btn-primary {
+    padding: 12px 22px;
+    font-size: 14px;
+    flex: 0 0 auto;
+    transition: box-shadow .3s ease, transform .15s ease;
+  }
+  .postcode-form.valid .btn-primary {
+    box-shadow:
+      0 0 0 2px rgba(232, 87, 45, 0.10),
+      0 4px 14px rgba(232, 87, 45, 0.22);
+    animation: ctaGlow 2.4s ease-in-out infinite;
+  }
+  @keyframes ctaGlow {
+    0%, 100% {
+      box-shadow:
+        0 0 0 2px rgba(232, 87, 45, 0.10),
+        0 4px 14px rgba(232, 87, 45, 0.22);
+    }
+    50% {
+      box-shadow:
+        0 0 0 3px rgba(232, 87, 45, 0.14),
+        0 5px 18px rgba(232, 87, 45, 0.32);
+    }
+  }
+  .postcode-error {
+    font-size: 13px;
+    color: #c0392b;
+    margin: -4px 0 0;
+    display: none;
+  }
+  .postcode-error.show { display: block; }
+
+  /* ============ BOOKING WIDGET ============ */
+  .booking-widget {
+    display: none;
+    background: #F7FBFB;
+    padding: 56px 0 80px;
+    scroll-margin-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .booking-widget.open { display: block; animation: revealWidget .35s ease-out; }
+  @keyframes revealWidget {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .booking-widget h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #007374;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .booking-widget .lede {
+    text-align: center;
+    color: #007374;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 32px;
+  }
+  .booking-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: 0 4px 24px rgba(10, 91, 86, 0.06);
+    border: 1px solid var(--rule);
+  }
+  .booking-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+  }
+  .booking-tab {
+    flex: 1;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #b0bcba;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .booking-tab.active {
+    color: #007374;
+    border-bottom-color: #007374;
+  }
+  .booking-tab .num {
+    width: 24px; height: 24px;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+  }
+  .booking-info {
+    background: #f5f7f6;
+    padding: 24px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  .booking-info p {
+    margin: 0 0 12px;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+  .booking-info strong { color: var(--ink); }
+  .booking-info .italic {
+    font-style: italic;
+  }
+  .booking-info hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 20px 0;
+  }
+  .booking-info .small-label {
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .hospital-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #007374;
+    margin: 0 0 18px;
+    line-height: 1.3;
+  }
+  .hospital-address {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .hospital-address svg {
+    flex: 0 0 18px;
+    width: 18px; height: 18px;
+    color: var(--ink);
+    margin-top: 2px;
+  }
+  .hospital-address-content {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+  .hospital-address-content strong { display: block; margin-bottom: 4px; color: var(--ink); }
+  .booking-calendar {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 20px 16px;
+  }
+  .calendar-header {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #007374;
+    margin: 0 0 18px;
+  }
+  .calendar-month-label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink-2);
+    letter-spacing: 0.14em;
+    margin: 16px 0 8px;
+  }
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  .calendar-day-name {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    padding: 6px 0 8px;
+  }
+  .calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #007374;
+    transition: background .15s ease;
+  }
+  .calendar-day:hover { background: #E8F4F4; }
+  .calendar-day.disabled { color: #c5cdcb; cursor: default; }
+  .calendar-day.disabled:hover { background: transparent; }
+  .calendar-day.selected {
+    border: 1.5px solid #007374;
+    color: #007374;
+  }
+  .calendar-day.empty { visibility: hidden; cursor: default; }
+  .booking-slots h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 12px;
+    line-height: 1.4;
+  }
+  .booking-slots p {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.6;
+    margin: 0 0 14px;
+  }
+  .booking-slots .phone { font-weight: 700; color: var(--ink); }
+  .btn-secondary-cta {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 13px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  .btn-secondary-cta:hover { background: var(--orange-hover); }
+  .booking-cta-footer {
+    margin-top: 32px;
+    text-align: center;
+  }
+  .btn-continue {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 16px 44px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-continue:hover { background: var(--orange-hover); }
+
+  /* ============ CALLBACK MODAL ============ */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 31, 29, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .modal-overlay.open {
+    display: flex;
+    animation: fadeIn .2s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .modal-card {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 36px 36px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: modalSlide .25s ease-out;
+    margin: auto;
+  }
+  @keyframes modalSlide {
+    from { opacity: 0; transform: translateY(12px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .modal-close {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 36px; height: 36px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--ink-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background .15s ease;
+  }
+  .modal-close:hover { background: #f5f7f6; }
+  .modal-close svg { width: 20px; height: 20px; }
+  .modal-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #007374;
+    text-align: center;
+    margin: 0 0 28px;
+    letter-spacing: -0.01em;
+  }
+  .form-field {
+    position: relative;
+    margin-bottom: 14px;
+  }
+  .form-field svg.icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #9ca5a3;
+    pointer-events: none;
+  }
+  .form-field input {
+    width: 100%;
+    padding: 16px 16px 16px 46px;
+    border: 1.5px solid var(--rule);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    font-family: inherit;
+    background: #fafbfb;
+    outline: none;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .form-field input::placeholder {
+    color: #9ca5a3;
+    font-weight: 600;
+  }
+  .form-field input:focus {
+    border-color: #007374;
+    background: #fff;
+  }
+  .form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 22px 0 8px;
+  }
+  .form-checkbox input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin: 2px 0 0;
+    cursor: pointer;
+    accent-color: #007374;
+    flex: 0 0 22px;
+  }
+  .form-checkbox label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.4;
+    cursor: pointer;
+  }
+  .form-policy {
+    font-size: 13px;
+    color: var(--ink-2);
+    text-align: center;
+    margin: 12px 0 0;
+    line-height: 1.5;
+  }
+  .form-policy a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .form-policy a:hover { color: var(--orange-hover); }
+  .form-disclaimer {
+    font-size: 13px;
+    color: var(--ink-2);
+    text-align: center;
+    margin: 20px 0 24px;
+    line-height: 1.6;
+    padding: 0 8px;
+  }
+  .modal-card .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 16px 28px;
+    font-size: 15px;
+    border-radius: 999px;
+  }
+  .modal-card .btn-primary .arrow {
+    margin-left: 6px;
+    display: inline-block;
+  }
+  body.modal-open { overflow: hidden; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 960px) {
+    .hero-grid, .surgeons-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 40px; }
+    .benefit-grid, .pricing-grid, .review-grid, .process-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .process-grid::before { display: none; }
+    .section, .surgeons, .process, .faq, .reviews, .cta-banner { padding: 56px 0; }
+    .booking-grid { grid-template-columns: 1fr; gap: 20px; }
+    .booking-card { padding: 24px; }
+    .booking-widget h2 { font-size: 24px; }
+  }
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 32px; }
+    .section h2, .cta-banner h2, .surgeons h2, .process h2, .faq h2, .reviews h2 { font-size: 26px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .cta-row { flex-direction: column; align-items: stretch; gap: 14px; }
+
+    .postcode-form {
+      flex-direction: column;
+      align-items: stretch;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      gap: 12px;
+      max-width: none;
+    }
+    .postcode-form:focus-within {
+      box-shadow: none;
+      border: none;
+    }
+    .postcode-input {
+      background: #fff;
+      border: 1.5px solid var(--rule);
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-size: 16px; /* prevents iOS zoom on focus */
+      width: 100%;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .postcode-input:focus {
+      border-color: #007374;
+      box-shadow: 0 0 0 3px rgba(0, 115, 116, 0.12);
+    }
+    .postcode-form .btn-primary {
+      width: 100%;
+      padding: 16px 22px;
+      font-size: 16px;
+      border-radius: 14px;
+    }
+    .postcode-form.valid .btn-primary {
+      box-shadow:
+        0 0 0 2px rgba(232, 87, 45, 0.10),
+        0 4px 14px rgba(232, 87, 45, 0.22);
+    }
+    @keyframes ctaGlow {
+      0%, 100% {
+        box-shadow:
+          0 0 0 2px rgba(232, 87, 45, 0.10),
+          0 4px 14px rgba(232, 87, 45, 0.22);
+      }
+      50% {
+        box-shadow:
+          0 0 0 3px rgba(232, 87, 45, 0.14),
+          0 5px 18px rgba(232, 87, 45, 0.32);
+      }
+    }
+    .postcode-error { margin-top: -4px; }
+
+    .modal-card { padding: 32px 22px 24px; border-radius: 14px; }
+    .modal-card h3 { font-size: 22px; margin-bottom: 22px; }
+    .form-field input { padding: 14px 14px 14px 44px; font-size: 16px; }
+    .form-policy { font-size: 12px; }
+    .form-disclaimer { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark"></div>
+      <div class="logo-text">
+        <span class="brand">Optegra</span>
+        <span class="tag">Eye Health Care</span>
+      </div>
+    </a>
+    <div class="text-size" aria-label="Text size">
+      <span>A</span><span>A</span><span>A</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Laser eye surgery<br/>for life</h1>
+      <p class="sub">Achieve clearer vision, from day to night</p>
+
+      <div class="hero-point">
+        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>From only <span class="price-pill">£25/mo</span> – 0% Finance options available</span>
+      </div>
+
+      <div class="trust-row">
+        <span class="label">Excellent</span>
+        <div class="trust-stars">
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        </div>
+        <span class="trust-brand">
+          <svg class="tp-star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg>
+          Trustpilot
+        </span>
+      </div>
+
+      <div class="cta-row">
+        <div class="postcode-form" data-postcode-form action="javascript:void(0);">
+          <input
+            type="text"
+            class="postcode-input"
+            placeholder="Enter your postcode"
+            aria-label="Your postcode"
+            autocomplete="postal-code"
+            data-postcode-input
+          />
+          <button type="button" class="btn-primary" onclick="handlePostcodeSubmitFromTrigger(this)">Book Free Consultation</button>
+        </div>
+        <p class="postcode-error" data-postcode-error>Please enter a valid UK postcode.</p>
+      </div>
+
+      <p class="fineprint">
+        Video or telephone appointments available from the convenience of your<br/>
+        own home. <strong>Private Treatments only.</strong> NHS queries 0207 09 4186
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=900&q=80"
+           alt="Doctor consulting with a patient about laser eye surgery" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING WIDGET ============ -->
+<section class="booking-widget" id="booking-widget" aria-hidden="true">
+  <div class="wrap">
+    <h2>Book a free virtual consultation</h2>
+    <p class="lede">Just follow the steps below...</p>
+    <div class="booking-card">
+      <div class="booking-tabs">
+        <div class="booking-tab active">
+          <span class="num">1</span>
+          <span>Date and Time</span>
+        </div>
+        <div class="booking-tab">
+          <span class="num">2</span>
+          <span>Contact Details</span>
+        </div>
+      </div>
+
+      <div class="booking-grid">
+        <div class="booking-info">
+          <p><strong>Step 1:</strong> Virtual consultation</p>
+          <p><strong>Step 2:</strong> Face to face assessment at your nearby hospital</p>
+          <p class="italic">If you're making a booking on behalf of someone else, please input their contact details and information and make sure they are present at the appointment.</p>
+          <hr/>
+          <p class="small-label">Your nearest hospital is:</p>
+          <h3 class="hospital-name" id="hospital-name">Optegra Eye Hospital Manchester</h3>
+          <div class="hospital-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="hospital-address-content" id="hospital-address">
+              <strong>Address</strong>
+              One Didsbury Point<br/>
+              2 The Avenue<br/>
+              Didsbury<br/>
+              Manchester<br/>
+              M20 2EY
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-calendar">
+          <h4 class="calendar-header">Next Available Dates</h4>
+          <p class="calendar-month-label">MAY 2026</p>
+          <div class="calendar-grid" id="calendar-grid"></div>
+          <p class="calendar-month-label">JUNE 2026</p>
+          <div class="calendar-grid" id="calendar-grid-2"></div>
+        </div>
+
+        <div class="booking-slots">
+          <h4>Sorry, there are no more booking slots available for today.</h4>
+          <p>Please click on another date for more available time slots.</p>
+          <p>Or if you prefer, you can call our Patient Services Team on <span class="phone">0800 086 1064</span>.</p>
+          <button class="btn-secondary-cta">View next available day</button>
+        </div>
+      </div>
+
+      <div class="booking-cta-footer">
+        <button class="btn-continue">Enter your contact details ▸</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></div>
+      <div class="stat-title">Rated Excellent</div>
+      <div class="stat-sub">on Trustpilot</div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="stat-title">1 million+</div>
+      <div class="stat-sub">Patients treated</div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+      <div class="stat-title">0% Finance</div>
+      <div class="stat-sub">Flexible payment options</div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+      <div class="stat-title">State of the art</div>
+      <div class="stat-sub">Hospitals nationwide</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section">
+  <div class="wrap">
+    <h2>See more clearly, with all the benefits</h2>
+    <p class="lede">Clearer vision, simple treatment and a quick route to daily life</p>
+
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Regain clearer natural vision</h3>
+        <ul>
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>No more glasses that don't naturally fit into everyday life</span></li>
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>No more contact lenses with their regular inconvenience</span></li>
+        </ul>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Quick, simple treatment</h3>
+        <ul>
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Treatment takes only <strong>10–15 minutes</strong> per eye</span></li>
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>No overnight stay required</span></li>
+        </ul>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Fast return to daily life</h3>
+        <ul>
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Typical recovery time of around <strong>48 hours</strong></span></li>
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Aftercare and follow-up support included</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews">
+  <div class="wrap">
+    <h2>Read our Laser Eye Surgery Patient Reviews</h2>
+    <div class="reviews-rating">
+      <span>Our customer say</span>
+      <span class="label">Excellent</span>
+      <div class="trust-stars">
+        <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+      </div>
+      <span><strong>4.8 / 5</strong> – Over 8,276 reviews on Trustpilot</span>
+      <span class="trust-brand">
+        <svg class="tp-star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg>
+        Trustpilot
+      </span>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        </div>
+        <p>The staff were professional, thorough, kind and helpful from start to finish. The staff over the phone and in...</p>
+        <div class="author">Tamsyn Harkness</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        </div>
+        <p>Thank you so much Optegra for carrying out Lasek on my eyes. I am now 3 weeks post-op and am absolutely...</p>
+        <div class="author">Sarah Abbot</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+          <span class="star-box"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9 17 14 19 22 12 17 5 22 7 14 2 9 9 9"/></svg></span>
+        </div>
+        <p>I had ReLEx SMILE surgery at the Bradford Hospital by Dr Rehman. The whole experience from my initial...</p>
+        <div class="author">Mark Kimber</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER #1 ============ -->
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>Take the first step towards clearer vision without glasses</h2>
+    <p>Video and telephone appointments available from the comfort of your own home. No obligation, completely free.</p>
+    <div class="cta-row">
+      <div class="postcode-form" data-postcode-form action="javascript:void(0);">
+        <input
+          type="text"
+          class="postcode-input"
+          placeholder="Enter your postcode"
+          aria-label="Your postcode"
+          autocomplete="postal-code"
+          data-postcode-input
+        />
+        <button type="button" class="btn-primary" onclick="handlePostcodeSubmitFromTrigger(this)">Book Free Consultation</button>
+      </div>
+      <p class="postcode-error" data-postcode-error>Please enter a valid UK postcode.</p>
+    </div>
+    <a href="#" class="link-underline">Or Request a callback</a>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section">
+  <div class="wrap">
+    <h2>Explore your treatment options</h2>
+    <p class="lede">Tailored to your vision needs, with transparent pricing from the start</p>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>LASEK</h3>
+        <p class="desc">Best suited for people with thin corneas and low-to-moderate prescriptions</p>
+        <div class="price">£1,495</div>
+        <div class="price-sub">per eye</div>
+        <div class="price-divider"></div>
+        <ul>
+          <li>Suitable for a wide range of prescriptions</li>
+          <li>Short recovery of 1–2 weeks typically</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <h3>LASIK</h3>
+        <p class="desc">Can treat a wide range of prescriptions and is popular for a fast recovery</p>
+        <div class="price">£1,995</div>
+        <div class="price-sub">per eye</div>
+        <div class="price-divider"></div>
+        <ul>
+          <li>Fast recovery — most resume normal activities within 24 hours</li>
+          <li>Suitable for most common prescriptions</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <h3>ReLEx SMILE</h3>
+        <p class="desc">The most advanced method with fast recovery using self-healing laser technology</p>
+        <div class="price">£2,595</div>
+        <div class="price-sub">per eye</div>
+        <div class="price-divider"></div>
+        <ul>
+          <li>Minimally invasive — no flap created</li>
+          <li>Ideal for active lifestyles and dry eye sufferers</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <h3>PRESBYOND</h3>
+        <p class="desc">Blended vision treatment ideal for age-related eye changes and those who need distance and reading vision</p>
+        <div class="price">£2,895</div>
+        <div class="price-sub">per eye</div>
+        <div class="price-divider"></div>
+        <ul>
+          <li>Treats both near and distance vision loss</li>
+          <li>Ideal for patients over 45</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SURGEONS ============ -->
+<section class="surgeons">
+  <div class="wrap surgeons-grid">
+    <div>
+      <h2>World class Laser Eye<br/>Surgeons</h2>
+      <div class="surgeon-card">
+        <div class="surgeon-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div>
+          <h4>Royal College of Ophthalmologists</h4>
+          <p>All surgeons hold Fellowship of the RCOphth or equivalent</p>
+        </div>
+      </div>
+
+      <div class="surgeon-card">
+        <div class="surgeon-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <h4>NHS-based specialists</h4>
+          <p>Your surgeon also practices within the NHS — bringing the highest clinical standards</p>
+        </div>
+      </div>
+
+      <div class="surgeon-card">
+        <div class="surgeon-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <h4>Award-winning clinics</h4>
+          <p>Optegra Eye Hospitals are ranked among the most top-rated private eye care providers in the UK</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="surgeon-image">
+      <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80"
+           alt="Optegra laser eye surgeon in hospital" />
+      <div class="surgeon-badge">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        <span>Trusted by over<br/>1 million+ patients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process">
+  <div class="wrap">
+    <h2>A simple, guided process</h2>
+    <p class="lede">Designed to make your journey to clearer vision straightforward</p>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div class="step-number">1</div>
+        </div>
+        <h4>Free Virtual Consultation</h4>
+        <p>No obligation appointment with our expert team. We'll cover your suitability and explain which options are right for you.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><polyline points="8 12 11 15 16 9"/></svg>
+          <div class="step-number">2</div>
+        </div>
+        <h4>Your Personalised Assessment</h4>
+        <p>Meet your surgeon in person for a detailed eye assessment to confirm the treatment that's right for you.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <div class="step-number">3</div>
+        </div>
+        <h4>Your Treatment Day</h4>
+        <p>A quick, comfortable procedure with support throughout, with aftercare to guide your recovery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <p class="lede">Everything you need to know before your consultation</p>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>
+          Am I suitable for laser eye surgery?
+          <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="answer">
+          Most people with a stable prescription over the age of 18 are suitable for laser eye surgery. During your free virtual consultation, our experts will assess your suitability based on your prescription, corneal thickness, and overall eye health. The vast majority of patients are suitable for at least one of our treatments.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Does laser eye surgery hurt?
+          <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="answer">
+          Numbing drops are applied before treatment so the procedure itself is not painful. Most patients describe mild pressure or awareness but no pain. Any mild discomfort afterward typically settles within a few hours.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          How long does recovery take?
+          <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="answer">
+          Recovery varies by treatment type. LASIK and ReLEx SMILE patients often return to normal activities within 24–48 hours. LASEK recovery typically takes 1–2 weeks. Your surgeon will guide you through the full aftercare process.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          What are the finance options available?
+          <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="answer">
+          We offer 0% finance options from as little as £25 per month, with plans ranging from 10 months to longer terms. Finance is subject to status — your consultation team can walk you through the options best suited to your circumstances.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Is laser eye surgery permanent?
+          <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="answer">
+          Yes, the corneal reshaping achieved in laser eye surgery is permanent. However, age-related changes (such as presbyopia, typically after 40) can still affect vision over time. Treatments like PRESBYOND are designed to address these age-related changes.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER #2 ============ -->
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>Take the first step towards clearer vision without glasses</h2>
+    <p>Video and telephone appointments available from the comfort of your own home. No obligation, completely free.</p>
+    <div class="cta-row">
+      <div class="postcode-form" data-postcode-form action="javascript:void(0);">
+        <input
+          type="text"
+          class="postcode-input"
+          placeholder="Enter your postcode"
+          aria-label="Your postcode"
+          autocomplete="postal-code"
+          data-postcode-input
+        />
+        <button type="button" class="btn-primary" onclick="handlePostcodeSubmitFromTrigger(this)">Book Free Consultation</button>
+      </div>
+      <p class="postcode-error" data-postcode-error>Please enter a valid UK postcode.</p>
+    </div>
+    <a href="#" class="link-underline">Or Request a callback</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-mark"></div>
+          <div class="logo-text">
+            <span class="brand">Optegra</span>
+            <span class="tag">Eye Health Care</span>
+          </div>
+        </a>
+        <p>Optegra Eye Health Care provides specialist laser eye surgery across the UK. Private treatments only.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Treatments</h5>
+        <ul>
+          <li><a href="#">LASIK</a></li>
+          <li><a href="#">LASEK</a></li>
+          <li><a href="#">ReLEx SMILE</a></li>
+          <li><a href="#">PRESBYOND</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Optegra</a></li>
+          <li><a href="#">Our Surgeons</a></li>
+          <li><a href="#">Hospital Locations</a></li>
+          <li><a href="#">Patient Stories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#">Book Consultation</a></li>
+          <li><a href="#">Request a Callback</a></li>
+          <li><a href="#">Find a Hospital</a></li>
+          <li><a href="#">Finance Options</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 Optegra Eye Health Care. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const HOSPITALS = {
+    M:  { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
+    BL: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
+    OL: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
+    SK: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
+    WA: { name: "Optegra Eye Hospital Manchester", address: ["One Didsbury Point", "2 The Avenue", "Didsbury", "Manchester", "M20 2EY"] },
+    L:  { name: "Optegra Eye Hospital Liverpool",  address: ["Liverpool Innovation Park", "Edge Lane", "Liverpool", "L7 9NJ"] },
+    B:  { name: "Optegra Eye Hospital Birmingham", address: ["Aston Cross Business Park", "50 Rocky Lane", "Aston", "Birmingham", "B6 5RQ"] },
+    CV: { name: "Optegra Eye Hospital Birmingham", address: ["Aston Cross Business Park", "50 Rocky Lane", "Aston", "Birmingham", "B6 5RQ"] },
+    LS: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
+    BD: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
+    HD: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
+    HX: { name: "Optegra Eye Hospital Yorkshire",  address: ["Apperley Bridge", "Leeds Road", "Bradford", "BD10 0NQ"] },
+    LONDON: { name: "Optegra Eye Hospital London", address: ["25 Queen Anne Street", "Marylebone", "London", "W1G 9HT"] },
+  };
+  const LONDON_PREFIXES = ["EC","WC","W","N","NW","SW","SE","E"];
+
+  function lookupHospital(postcode) {
+    const prefix = (postcode.match(/^[A-Z]+/) || [""])[0];
+    if (LONDON_PREFIXES.includes(prefix)) return HOSPITALS.LONDON;
+    return HOSPITALS[prefix] || HOSPITALS.M;
+  }
+
+  function handlePostcodeSubmitFromTrigger(buttonEl) {
+    const formEl = buttonEl.closest('[data-postcode-form]');
+    if (!formEl) return false;
+    const input = formEl.querySelector('[data-postcode-input]');
+    const error = formEl.parentElement.querySelector('[data-postcode-error]');
+    const value = input.value.trim().toUpperCase();
+    const ukPostcodeRegex = /^[A-Z]{1,2}[0-9R][0-9A-Z]?\s*[0-9][A-Z]{2}$/i;
+
+    if (!ukPostcodeRegex.test(value)) {
+      if (error) error.classList.add('show');
+      return false;
+    }
+    if (error) error.classList.remove('show');
+
+    const hospital = lookupHospital(value);
+    document.getElementById('hospital-name').textContent = hospital.name;
+    document.getElementById('hospital-address').innerHTML =
+      '<strong>Address</strong>' + hospital.address.join('<br/>');
+
+    // Sync the value to all other postcode forms so the user sees their postcode persisted
+    document.querySelectorAll('[data-postcode-input]').forEach(otherInput => {
+      if (otherInput !== input) otherInput.value = value;
+    });
+    document.querySelectorAll('[data-postcode-form]').forEach(f => f.classList.add('valid'));
+
+    const widget = document.getElementById('booking-widget');
+    widget.classList.add('open');
+    widget.setAttribute('aria-hidden', 'false');
+
+    setTimeout(() => {
+      widget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+
+    return false;
+  }
+
+  function buildCalendar(elementId, year, month, monthLabel) {
+    const grid = document.getElementById(elementId);
+    if (!grid) return;
+    const today = new Date(2026, 4, 2); // 2 May 2026 — pinned for demo
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+    const startDayOfWeek = firstDay.getDay();
+    const daysInMonth = lastDay.getDate();
+    const dayNames = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+
+    let html = '';
+    dayNames.forEach(d => { html += `<div class="calendar-day-name">${d}</div>`; });
+    for (let i = 0; i < startDayOfWeek; i++) html += `<div class="calendar-day empty"></div>`;
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const date = new Date(year, month, d);
+      const dayOfWeek = date.getDay();
+      const isPast = date < today;
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+      const isSelectedDefault = (year === 2026 && month === 4 && d === 2);
+      let classes = 'calendar-day';
+      if (isPast || isWeekend) classes += ' disabled';
+      if (isSelectedDefault) classes += ' selected';
+      html += `<div class="${classes}" data-date="${year}-${month+1}-${d}">${d}</div>`;
+    }
+    grid.innerHTML = html;
+
+    grid.querySelectorAll('.calendar-day:not(.disabled):not(.empty)').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+        el.classList.add('selected');
+      });
+    });
+  }
+
+  function openCallbackModal() {
+    const modal = document.getElementById('callback-modal');
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    setTimeout(() => {
+      const firstInput = modal.querySelector('input[name="firstName"]');
+      if (firstInput) firstInput.focus();
+    }, 100);
+  }
+
+  function closeCallbackModal() {
+    const modal = document.getElementById('callback-modal');
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  function handleCallbackSubmit(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+    }
+    const container = document.getElementById('callback-form');
+    const inputs = container.querySelectorAll('input');
+    const data = {};
+    let valid = true;
+    inputs.forEach(input => {
+      if (input.type === 'checkbox') {
+        data[input.name] = input.checked;
+        if (input.required && !input.checked) valid = false;
+      } else {
+        data[input.name] = input.value.trim();
+        if (input.required && !input.value.trim()) valid = false;
+      }
+    });
+
+    if (!valid) {
+      alert('Please complete all fields and accept the terms before submitting.');
+      return false;
+    }
+
+    console.log('Callback request:', data);
+    // TODO: replace with real submission endpoint
+    alert('Thanks — we\'ll be in touch shortly to arrange your callback.');
+    inputs.forEach(input => {
+      if (input.type === 'checkbox') input.checked = false;
+      else input.value = '';
+    });
+    closeCallbackModal();
+    return false;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    buildCalendar('calendar-grid', 2026, 4);   // May 2026
+    buildCalendar('calendar-grid-2', 2026, 5); // June 2026
+
+    // Wire up live validation glow + error clearing for ALL postcode forms on the page
+    const ukPostcodeRegex = /^[A-Z]{1,2}[0-9R][0-9A-Z]?\s*[0-9][A-Z]{2}$/i;
+    document.querySelectorAll('[data-postcode-input]').forEach(input => {
+      const form = input.closest('[data-postcode-form]');
+      const errorEl = form ? form.parentElement.querySelector('[data-postcode-error]') : null;
+      input.addEventListener('input', () => {
+        if (errorEl) errorEl.classList.remove('show');
+        const value = input.value.trim();
+        if (ukPostcodeRegex.test(value)) {
+          form.classList.add('valid');
+        } else {
+          form.classList.remove('valid');
+        }
+      });
+      // Allow Enter key to submit
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const btn = form.querySelector('button.btn-primary');
+          if (btn) handlePostcodeSubmitFromTrigger(btn);
+        }
+      });
+    });
+
+    // Wire up all "Or Request a callback" links to open the modal
+    document.querySelectorAll('a.link-underline').forEach(link => {
+      if (link.textContent.trim().toLowerCase().includes('callback')) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          openCallbackModal();
+        });
+      }
+    });
+
+    // Close modal on overlay click
+    const modal = document.getElementById('callback-modal');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeCallbackModal();
+      });
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const m = document.getElementById('callback-modal');
+        if (m && m.classList.contains('open')) closeCallbackModal();
+      }
+    });
+  });
+</script>
+<!-- ============ CALLBACK MODAL ============ -->
+<div class="modal-overlay" id="callback-modal" role="dialog" aria-modal="true" aria-labelledby="callback-modal-title" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" type="button" aria-label="Close" onclick="closeCallbackModal()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h3 id="callback-modal-title">Arrange a callback</h3>
+    <div id="callback-form">
+      <div class="form-field">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <input type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required />
+      </div>
+      <div class="form-field">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <input type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required />
+      </div>
+      <div class="form-field">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>
+        <input type="email" name="email" placeholder="Email" autocomplete="email" required />
+      </div>
+      <div class="form-field">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <input type="tel" name="phone" placeholder="+44 7700 900780" autocomplete="tel" required />
+      </div>
+
+      <div class="form-checkbox">
+        <input type="checkbox" id="accept-terms" name="acceptTerms" required />
+        <label for="accept-terms">I accept the terms &amp; conditions and privacy policy</label>
+      </div>
+      <p class="form-policy">
+        Read our <a href="#">terms &amp; conditions.</a> Read our <a href="#">privacy policy</a>
+      </p>
+
+      <p class="form-disclaimer">
+        Please note – by providing these details, you agree that we can contact you via these methods.
+      </p>
+
+      <button type="button" class="btn-primary" onclick="handleCallbackSubmit(event)">
+        Arrange Callback <span class="arrow">▸</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
