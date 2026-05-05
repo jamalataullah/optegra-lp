@@ -1481,30 +1481,30 @@
       <div class="footer-col">
         <h5>Treatments</h5>
         <ul>
-          <li><a href="#">LASIK</a></li>
-          <li><a href="#">LASEK</a></li>
-          <li><a href="#">ReLEx SMILE</a></li>
-          <li><a href="#">PRESBYOND</a></li>
+          <li><a href="https://www.optegra.com/laser-eye-surgery/lasik/" target="_blank" rel="noopener">LASIK</a></li>
+          <li><a href="https://www.optegra.com/laser-eye-surgery/lasek/" target="_blank" rel="noopener">LASEK</a></li>
+          <li><a href="https://www.optegra.com/treatments/laser-eye-surgery/smile/" target="_blank" rel="noopener">ReLEx SMILE</a></li>
+          <li><a href="https://www.optegra.com/presbyond-laser-eye-surgery/" target="_blank" rel="noopener">PRESBYOND</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="#">About Optegra</a></li>
-          <li><a href="#">Our Surgeons</a></li>
-          <li><a href="#">Hospital Locations</a></li>
-          <li><a href="#">Patient Stories</a></li>
+          <li><a href="https://www.optegra.com/about/" target="_blank" rel="noopener">About Optegra</a></li>
+          <li><a href="https://www.optegra.com/consultants/" target="_blank" rel="noopener">Our Surgeons</a></li>
+          <li><a href="https://www.optegra.com/hospitals-and-clinics/" target="_blank" rel="noopener">Hospital Locations</a></li>
+          <li><a href="https://www.optegra.com/testimonials/" target="_blank" rel="noopener">Patient Stories</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h5>Contact</h5>
         <ul>
-          <li><a href="#">Book Consultation</a></li>
-          <li><a href="#">Request a Callback</a></li>
-          <li><a href="#">Find a Hospital</a></li>
-          <li><a href="#">Finance Options</a></li>
+          <li><a href="https://www.optegra.com/contact-us/" target="_blank" rel="noopener">Book Consultation</a></li>
+          <li><a href="https://www.optegra.com/contact-us/" target="_blank" rel="noopener">Request a Callback</a></li>
+          <li><a href="https://www.optegra.com/hospitals-and-clinics/" target="_blank" rel="noopener">Find a Hospital</a></li>
+          <li><a href="https://www.optegra.com/finance/" target="_blank" rel="noopener">Finance Options</a></li>
         </ul>
       </div>
     </div>
@@ -1540,9 +1540,8 @@
     buttonEl.disabled = true;
     buttonEl.textContent = 'Loading...';
 
-    // Redirect to Optegra's laser eye surgery page with the postcode as a parameter
-    const postcodeParam = encodeURIComponent(value);
-    window.location.href = 'https://www.optegra.com/laser-eye-surgery/?postcode=' + postcodeParam;
+    // Redirect to Optegra's contact-us page (which contains the booking widget)
+    window.location.href = 'https://www.optegra.com/contact-us/';
 
     return false;
   }
